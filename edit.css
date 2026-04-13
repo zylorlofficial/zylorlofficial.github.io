@@ -1,279 +1,261 @@
-/*BEGIN PS4 Controller Styling*/
-.controller.ds4 {
+/*BEGIN Xbox One Controller Styling*/
+.controller.xbox {
     background: url(base.png);
-    height: 598px;
-    width: 806px;
-    /*    margin-left: -403px;
-        margin-top: -280px;*/
+    height: 630px;
+    width: 750px;
+    /*    margin-left: -375px;
+        margin-top: -285px;*/
 }
 
-.ds4.disconnected {
+.xbox.disconnected {
     background: url(disconnected.svg);
 }
 
-.ds4.disconnected div {
+.xbox.disconnected div {
     display: none;
 }
 
-.ds4 .triggers {
-    width: 588px;
-    height: 90px;
+.xbox .triggers {
+    width: 446px;
+    height: 121px;
     position: absolute;
-    left: 109px;
+    left: 152px;
 }
 
-.ds4 .trigger {
-    width: 99px;
-    height: 100%;
-    background: url(triggers.svg);
+.xbox .trigger {
+    width: 88px;
+    height: 121px;
+    background: url(trigger.svg);
     opacity: 0;
 }
 
-.ds4 .trigger.left {
+.xbox .trigger.left {
     float: left;
+    background-position: 0 0;
 }
 
-.ds4 .trigger.right {
-    float: right;
-    background-position-x: 99px;
-}
-
-.ds4 .bumper {
-    width: 99px;
-    height: 23px;
-    background: url(bumper.svg) no-repeat;
-    opacity: 0;
-}
-
-.ds4 .bumpers {
-    position: absolute;
-    width: 588px;
-    height: 23px;
-    left: 109px;
-    top: 94px;
-}
-
-.ds4 .bumper.pressed {
-    opacity: 1;
-}
-
-.ds4 .bumper.left {
-    /* -webkit-transform: rotateY(180deg); */
-    /* transform: rotateY(180deg); */
-    float: left;
-}
-
-.ds4 .bumper.right {
+.xbox .trigger.right {
     float: right;
     transform: rotateY(180deg);
 }
 
-.ds4 .touchpad {
-    width: 262px;
-    height: 151px;
-    position: absolute;
-    left: 272px;
-    top: 122px;
-}
-
-.ds4 .touchpad.pressed {
-    background: url(touchpad.svg) no-repeat center;
-}
-
-.ds4 .meta {
-    width: 42px;
-    height: 42px;
-    position: absolute;
-    left: 382px;
-    bottom: 216px;
-}
-
-.ds4 .meta.pressed {
-    background: url(meta.svg) no-repeat center;
-}
-
-/*Not needed, but I like keeping them here for posterity*/
-/*.ds4 .quadrant{
-position: absolute;
-background: url(ps4-assets/player-n.svg);
-height: 17px;
-width: 111px;
-top: 140px;
-left: 240px;
-}
-.ds4 .p0{
-background-position: 0 -6px;
-}
-.ds4 .p1{
-background-position: 0 -28px;
-}
-.ds4 .p2{
-background-position: 0 -49px;
-}
-.ds4 .p3{
-background-position: 0 -70px;
-}*/
-.ds4 .arrows {
-    position: absolute;
-    width: 352px;
-    height: 46px;
-    top: 142px;
-    left: 227px;
-}
-
-.ds4 .back, .ds4 .start {
-    background: url(start.svg);
-    width: 28px;
-    height: 46px;
+.xbox .bumper {
+    width: 170px;
+    height: 61px;
+    background: url(bumper.svg);
     opacity: 0;
 }
 
-.ds4 .back.pressed, .ds4 .start.pressed {
-    /* background-position-y: -21px; */
-    /* margin-top: 2px; */
+.xbox .bumpers {
+    position: absolute;
+    width: 536px;
+    height: 61px;
+    left: 107px;
+    top: 129px;
+}
+
+.xbox .bumper.pressed {
     opacity: 1;
 }
 
-.ds4 .back {
+.xbox .bumper.left {
     float: left;
-    /* width: 28px; */
 }
 
-.ds4 .start {
+.xbox .bumper.right {
     float: right;
-    /* width: 28px; */
-    background-position: 28px 0;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
-.ds4 .abxy {
+.xbox .quadrant {
     position: absolute;
-    width: 170px;
-    height: 171px;
-    top: 159px;
-    left: 567px;
+    background: url(quadrant.svg);
+    height: 45px;
+    width: 45px;
+    top: 258px;
+    left: 354px;
+    z-index: 0;
 }
 
-.ds4 .button {
+.xbox .p0 {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.xbox .p1 {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.xbox .p2 {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+.xbox .p3 {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.xbox .arrows {
     position: absolute;
-    width: 55px;
-    height: 55px;
-    background: url(face.svg);
+    width: 141px;
+    height: 33px;
+    top: 264px;
+    left: 306px;
 }
 
-.ds4 .button.pressed {
-    background-position-y: 55px;
-    /* margin-top: 5px; */
+.xbox .back, .xbox .start {
+    background: url(start-select.svg);
+    width: 33px;
+    height: 33px;
+    opacity: 0;
 }
 
-.ds4 .a {
+.xbox .back.pressed, .xbox .start.pressed {
+    opacity: 1;
+}
+
+.xbox .back {
+    float: left;
+}
+
+.xbox .start {
+    background-position: 33px 0px;
+    float: right;
+}
+
+.xbox .abxy {
+    position: absolute;
+    width: 153px;
+    height: 156px;
+    top: 192px;
+    left: 488px;
+}
+
+.xbox .button {
+    position: absolute;
+    background: url(abxy.svg);
+    width: 48px;
+    height: 48px;
+}
+
+.xbox .button.pressed {
+    background-position-y: -48px;
+    margin-top: 5px;
+    opacity: 1;
+}
+
+.xbox .a {
     background-position: 0 0;
-    bottom: 0;
-    left: 58px;
+    top: 108px;
+    left: 55px;
 }
 
-.ds4 .b {
-    background-position: -57px 0;
+.xbox .b {
+    background-position: -49px 0;
     top: 58px;
     right: 0px;
 }
 
-.ds4 .x {
-    background-position: -113px 0;
+.xbox .x {
+    background-position: -98px 0;
     top: 58px;
+    left: 4px;
 }
 
-.ds4 .y {
-    background-position: 55px 0;
-    left: 58px;
+.xbox .y {
+    background-position: 48px 0;
+    left: 55px;
+    top: 7px;
 }
 
-.ds4 .sticks {
+.xbox .sticks {
     position: absolute;
-    width: 361px;
-    height: 105px;
-    top: 308px;
-    left: 228px;
+    width: 371px;
+    height: 196px;
+    top: 239px;
+    left: 144px;
 }
 
-.ds4 .stick {
+.xbox .stick {
     position: absolute;
-    background: url(sticks.svg);
-    height: 94px;
-    width: 94px;
+    background: url(stick.svg);
+    background-position: -85px 0;
+    height: 83px;
+    width: 83px;
 }
 
-.ds4 .stick.pressed.left {
-    background-position-x: -96px;
+.xbox .stick.pressed {
+    background-position: 0 0;
 }
 
-.ds4 .stick.pressed.right {
-    background-position-x: -192px;
-}
-
-.ds4 .stick.left {
+.xbox .stick.left {
     top: 0;
     left: 0;
 }
 
-.ds4 .stick.right {
-    top: calc(100% - 105px);
-    left: calc(100% - 105px);
+.xbox .stick.right {
+    top: 113px;
+    left: 288px;
 }
 
-.ds4 .dpad {
+.xbox .dpad {
     position: absolute;
-    width: 125px;
-    height: 126px;
-    top: 181px;
-    left: 92px;
+    width: 110px;
+    height: 111px;
+    top: 345px;
+    left: 223px;
 }
 
-.ds4 .face {
+.xbox .face {
     background: url(dpad.svg);
     position: absolute;
+    opacity: 0;
 }
 
-.ds4 .face.up, .ds4 .face.down {
-    width: 36px;
-    height: 52px;
+.xbox .face.pressed {
+    opacity: 1;
 }
 
-.ds4 .face.left, .ds4 .face.right {
-    width: 52px;
-    height: 36px;
+.xbox .face.up {
+    background-position: 34px 0;
+    left: 38px;
+    top: 0px;
+    width: 34px;
+    height: 56px;
 }
 
-.ds4 .face.up {
-    left: 44px;
-    top: 0;
-    background-position: -37px 0px;
-}
-
-.ds4 .face.down {
-    left: 44px;
+.xbox .face.down {
+    left: 38px;
     bottom: 0;
-    background-position: 0px 0;
+    width: 34px;
+    height: 56px;
 }
 
-.ds4 .face.left {
-    top: 45px;
+.xbox .face.left {
+    background-position: 0 -93px;
+    width: 55px;
+    height: 35px;
+    top: 38px;
     left: 0;
-    background-position: 104px 0;
 }
 
-.ds4 .face.right {
-    top: 45px;
-    right: 0px;
-    background-position: 52px 0;
+.xbox .face.right {
+    background-position: 0 -57px;
+    width: 55px;
+    height: 35px;
+    top: 38px;
+    right: 0;
 }
 
-.ds4 .face.pressed {
-    /* margin-top: 5px; */
-    background-position-y: 52px;
+.xbox.half {
+    margin-top: -315px;
 }
 
-.ds4.half {
-    margin-top: -300px;
+.xbox {
+    background: no-repeat center;
 }
 
-/*END PS4 Controller Styling*/
+/*END Xbox One Controller Styling*/
